@@ -54,20 +54,26 @@ export default function Home() {
     }
   };
 
-  // compute dynamic font size for name based on length
+  // compute dynamic font size for name based on length and screen size
   const computeNameFontSize = (text: string) => {
     const len = text.trim().length;
-    const baseMax = 34; // px
-    const baseMin = 14; // px
+    // Detect mobile (width <= 600px)
+    let isMobile = false;
+    if (typeof window !== 'undefined') {
+      isMobile = window.innerWidth <= 600 || window.matchMedia('(max-width: 600px)').matches;
+    }
+    // Lower max font size on mobile
+    const baseMax = isMobile ? 22 : 34; // px
+    const baseMin = 12; // px
     if (!len) return `${baseMax}px`;
 
-    if (len <= 10) return `clamp(20px, 3.2vw, ${baseMax}px)`;
+    if (len <= 10) return `clamp(16px, 3vw, ${baseMax}px)`;
 
     // reduce max size progressively for longer names
     const extra = len - 10;
     // each extra character reduces the max by ~0.9px, but clamp to baseMin
     const reducedMax = Math.max(baseMin, Math.round(baseMax - extra * 0.9));
-    return `clamp(${baseMin}px, calc(16px + ${Math.max(0.8, 3.2 - extra * 0.06)}vw), ${reducedMax}px)`;
+    return `clamp(${baseMin}px, calc(13px + ${Math.max(0.7, 2.5 - extra * 0.06)}vw), ${reducedMax}px)`;
   };
 
   // pinch-to-zoom handlers for mobile preview
