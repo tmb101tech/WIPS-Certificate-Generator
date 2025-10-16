@@ -124,8 +124,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJWMzRoLTJ6bTAtNGgydjJoLTJ2LTJ6bTAtNHYyaC0ydi0yaDF6bTAtNGgydjJoLTJ2LTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJWMzRoLTJ6bTAtNGgydjJoLTJ2LTJ6bTAtNHYyaC0ydi0yaDF6bTAtNGgydjJoLTJ2LTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20 pointer-events-none"></div>
 
   {/* Landing / form: hidden while loading/success/certificate shown */}
   {!showCert && !isLoading && !isSuccess && (
@@ -244,8 +244,8 @@ export default function Home() {
                 transform: "translate(-50%, -50%)",
                 color: "#000000",
                 fontWeight: 600,
-                fontFamily: "'Dancing Script', cursive",
-                fontStyle: 'italic',
+                fontFamily: "'Bookman OldStyle', serif",
+                // fontStyle: 'italic',
                 textShadow: "0 1px 2px rgba(0,0,0,0.08)",
                 letterSpacing: "0.3px",
                 padding: '0 12px',
@@ -268,7 +268,7 @@ export default function Home() {
               className="bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2"
             >
               <ArrowLeft className="w-5 h-5" />
-              Back
+              Regenerate
             </button>
           </div>
         </div>
@@ -276,7 +276,8 @@ export default function Home() {
 
       {/* Footer showing my name linked to my portfolio */}
       <div className="w-full flex justify-center mt-10 mb-6">
-        <footer className="text-center text-sm text-white/60">
+        <footer className="relative z-20 text-center text-sm text-white/60">
+
           © 2025{' '}
           <a
             href="https://tmb-space.netlify.app/"
