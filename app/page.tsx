@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import { Award, Download, ArrowLeft, Sparkles, Loader2, Check } from "lucide-react";
+import { Award, Download, ArrowLeft, Sparkles, Loader2, Check, RefreshCcw } from "lucide-react";
 
 export default function Home() {
   // component state
@@ -267,7 +267,7 @@ export default function Home() {
               onClick={() => setShowCert(false)}
               className="bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <RefreshCcw className="w-5 h-5" />
               Regenerate
             </button>
           </div>
