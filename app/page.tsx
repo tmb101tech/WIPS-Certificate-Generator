@@ -242,11 +242,12 @@ export default function Home() {
                 top: "44%",
                 left: "55%",
                 transform: "translate(-50%, -50%)",
-                color: "#d4af37",
+                color: "#000000",
                 fontWeight: 600,
-                fontFamily: "'Libre Baskerville', 'Montserrat', serif",
-                textShadow: "0 1px 2px rgba(0,0,0,0.12)",
-                letterSpacing: "0.2px",
+                fontFamily: "'Dancing Script', cursive",
+                fontStyle: 'italic',
+                textShadow: "0 1px 2px rgba(0,0,0,0.08)",
+                letterSpacing: "0.3px",
                 padding: '0 12px',
               }}
             >
